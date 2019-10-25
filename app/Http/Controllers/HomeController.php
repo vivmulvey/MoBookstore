@@ -13,7 +13,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth'); //In order to use the below functions you need to be authorized
     }
 
     /**
@@ -21,8 +21,19 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('home');
+        $user = $request->user(); //See what role they have
+        $home = 'user.home';
+
+        if ($user->hasRole('admin')){
+          $home = 'admin.home';
+        }
+        else{
+          $home = 'user.home';
+        }
+
+
+        return redirect()->route($home);
     }
 }
