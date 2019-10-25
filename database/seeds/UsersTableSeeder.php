@@ -19,7 +19,7 @@ class UsersTableSeeder extends Seeder
       //User Model - Admin
       $admin = new User();
       $admin->name = 'Mo Che';
-      $admin->email = 'admin@mobookstore.ie';
+      $admin->email = 'admin1@mobookstore.ie';
       $admin->password = bcrypt('secret');
       $admin->save();
       $admin->roles()->attach($role_admin);
