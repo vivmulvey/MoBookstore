@@ -31,5 +31,41 @@ class UsersTableSeeder extends Seeder
       $user->password = bcrypt('secret');
       $user->save();
       $user->roles()->attach($role_user);
+
+      $user = new User();
+      $user->name = 'Andy Ryan';
+      $user->email = 'andyR@mobookstore.ie';
+      $user->password = bcrypt('secret');
+      $user->save();
+      $user->roles()->attach($role_user);
+
+      $user = new User();
+      $user->name = 'Mary Smith';
+      $user->email = 'marysmith@mobookstore.ie';
+      $user->password = bcrypt('secret');
+      $user->save();
+      $user->roles()->attach($role_user);
+
+      $user = new User();
+      $user->name = 'Sam Kenny';
+      $user->email = 'skenny@mobookstore.ie';
+      $user->password = bcrypt('secret');
+      $user->save();
+      $user->roles()->attach($role_user);
+
+      $user = new User();
+      $user->name = 'Laura Glynn';
+      $user->email = 'lglynn@mobookstore.ie';
+      $user->password = bcrypt('secret');
+      $user->save();
+      $user->roles()->attach($role_user);
+
+
+      $user = new User();
+      $user->name = 'Jane Lynch';
+      $user->email = 'janelynch@mobookstore.ie';
+      $user->password = bcrypt('secret');
+      $user->save();
+      $user->roles()->attach($role_user);
     }
 }

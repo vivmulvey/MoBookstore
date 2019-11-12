@@ -15,8 +15,9 @@ class HomeController extends Controller
         $this->middleware('role:user');
     }
 
-    public function index(){
-
+    public function index()
+    {
+      $user
       return view('user.home');
 
   }

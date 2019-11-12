@@ -6,5 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Book extends Model
 {
-    //
+  public function publisher(){
+    return $this->belongsTo('App\Publisher');
+  }
+
+  //$book->publisher()->name;
 }

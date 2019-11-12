@@ -41,8 +41,6 @@
                         </tbody>
                     </table>
                     <a href="{{ route('user.books.index') }}" class="btn btn-default ">Back</a>
-
-
                 </div>
             </div>
         </div>
