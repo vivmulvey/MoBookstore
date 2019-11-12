@@ -17,7 +17,7 @@ class HomeController extends Controller
 
     public function index()
     {
-      $user
+      
       return view('user.home');
 
   }

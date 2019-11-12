@@ -47,6 +47,11 @@ class User extends Authenticatable
       return $this->belongsToMany('App\Role' , 'user_role');
     }
 
+    public function reviews()
+    {
+      return $this->hasMany('App\Review');
+    }
+
 
 
     public function authorizeRoles($roles)  //checks what role they have

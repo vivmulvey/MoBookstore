@@ -10,5 +10,10 @@ class Book extends Model
     return $this->belongsTo('App\Publisher');
   }
 
+  public function reviews()
+  {
+    return $this->hasMany('App\Review');
+  }
+
   //$book->publisher()->name;
 }
